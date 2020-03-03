@@ -1,4 +1,4 @@
-{
+ {
     "type": "project",
     "license": "proprietary",
     "require": {
@@ -65,7 +65,7 @@
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "doctrine:migration:migrate --no-interaction": "symfony_cmd"
+            "doctrine:migrations:migrate --no-interaction": "symfony_cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
