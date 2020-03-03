@@ -3,10 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+    {% block nav %}
+    {% include "_template_parts/_nav.html.twig" %}
+    {% endblock %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        }
+        {% block footer %}
+        {% include "_template_parts/_footer.html.twig" %}
+        {% endblock %}
+        {% block javascripts %}
+         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="{{asset('assets/js/main.js')}}"></script>
+        {% endblock %}
     </body>
 </html>

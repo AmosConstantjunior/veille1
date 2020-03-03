@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Veille Index sql{% endblock %}
+
+{% block body %}
+    <div class="hero">
+
+        <h1><span>INDEX SQL</span><br>Performance grace aux index</h1>
+
+        <div class="mouse">
+            <span></span>
+        </div>
+
+    </div>
+
+    <div class="row content">
+        <div class="sec01">
+
+            <h1>Introduction</h1>
+            <p>Un index, dans le domaine bibliographique, permet de lister les mots-clés importants abordés dans un
+                ouvrage et d’indiquer les pages où le mot est mentionné</p>
+        </div>
+        <div class="sec02">
+
+            <h1>Index Informatique</h1>
+            <p>En informatique, dans les bases de données, un index est une structure de données utilisée et entretenue
+                par le système de gestion de base de données </p>
+        </div>
+        <div class="sec03">
+            <h1>Intérêt de l’index</h1>
+            <p>Un index permet d’accélérer certaines recherches par le fait que la structure sous-jacente à l’index est
+                spécialement conçue pour accélérer certaines recherches, notamment par le tri des données indexées.</p>
+        </div>
+        <div class="sec04">
+
+            <h1>Que fait l’index SQL</h1>
+            <p><img src="https://img.icons8.com/plasticine/35/000000/star--v1.png"> INDEXES peut localiser très
+                rapidement des informations dans une base de données. <br>
+                <img src="https://img.icons8.com/plasticine/35/000000/star--v1.png"> Un INDEX crée un catalogue de
+                lignes d'une table de base de données car une ligne peut être pointée en une fraction du temps avec un
+                minimum d'effort. <br>
+                <img src="https://img.icons8.com/plasticine/35/000000/star--v1.png"> Une table INDEX organise les
+                valeurs d'une ou plusieurs colonnes dans un ordre spécifique. <br>
+                <img src="https://img.icons8.com/plasticine/35/000000/star--v1.png"> INDEX peut fonctionner correctement
+                et rapidement pour les colonnes qui ont de nombreuses valeurs différentes. <br>
+                <img src="https://img.icons8.com/plasticine/35/000000/star--v1.png"> L'INDEX trie d'abord les données,
+                puis il attribue une identification à chaque ligne. <br>
+                <img src="https://img.icons8.com/plasticine/35/000000/star--v1.png"> La table INDEX n'a ​​que deux
+                colonnes, l'une est un rowid et l'autre est une colonne indexée (ordonnée).
+            </p>
+        </div>
+        <div class="sec05">
+            <h1>Création d’un index</h1>
+            <h2>Créer un index ordinaire</h2>
+            <p>La syntaxe basique est la suivante :</p>
+            <span>CREATE INDEX `index_nom` ON `table`;</span>
+            <p>Il est également possible de créer sur une seule colonne en précisant la colonne </p>
+            <span>CREATE INDEX `index_nom` ON `table` (`colonne1`);</span>
+            <p> On utilise la syntaxe suivante pour l'insérer sur plusieurs colonnes :</p>
+            <span>CREATE INDEX `index_nom` ON `table` (`colonne1`, `colonne2`);</span>
+
+            <h2>Créer un index unique</h2>
+            <p>Un index unique permet de spécifier qu’une ou plusieurs colonnes doivent contenir des valeurs uniques à
+                chaque enregistrement. Pour insérer un tel index il suffit d’exécuter une requête respectant la syntaxe
+                suivante :</p>
+            <span>CREATE UNIQUE INDEX `index_nom` ON `table` (`colonne1`);</span>
+            <p>créer un index d’unicité sur 2 colonnes :</p>
+            <span>CREATE UNIQUE INDEX `index_nom` ON `table` (`colonne1`, `colonne2`);</span>
+        </div>
+        <div class="sec06">
+            <h1>Comment nommer les index</h1>
+            <p>Il n’existe pas de convention de nommage spécifique sur le nom des index, mais juste des suggestions de
+                préfixes à utiliser de quelques développeurs et administrateurs de bases de données :</p>
+            <ul>
+                <li> Préfixe “PK_” pour Primary Key (traduction : clé primaire)</li>
+                <li>Préfixe “FK_” pour Foreign Key (traduction : clé étrangère)</li>
+                <li>Préfixe “UK_” pour Unique Key (traduction : clé unique)</li>
+                <li>Préfixe “UX_” pour Unique Index (traduction : index unique)</li>
+                <li>Préfixe “IX_” pour chaque autre IndeX</li>
+            </ul>
+        </div>
+        <div class="sec07">
+            <h1>Pratique</h1>
+            <p>Veillez vous rendre sur la page PHPMYADMI en cliquant sur l'icone de Mysql</p>
+            <a href="http://localhost/phpmyadmin/" target="_blank"><img
+                    src="https://img.icons8.com/ios/100/000000/mysql-logo.png"></a>
+        </div>
+       <a style="cursor:pointer;" id="myBtn2" > <img src="https://img.icons8.com/emoji/96/000000/waving-hand-emoji.png"></a>
+    </div>
+
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Mes sources</p>
+            <div>
+
+                <a href="https://sql.sh/cours/index/create" target="_blank"> <img src="sql.png"></a>
+                <a href="https://www.youtube.com/watch?v=fsG1XaZEa78" target="_blank"> <img style="height: 220px; width: 220px"
+                       src="https://festival-roc-castel.eu/wp-content/uploads/sites/21/2019/04/logo-youtube-png-rond-2.png"></a>
+               <a href="https://blog.developpez.com/sqlpro/p9816/langage-sql-norme/tout_sur_l_index" target="_blank"><img style="height: 220px; width: 220px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuogBFyNbCDhNWdFwXIi47Inq1ImAoXmc8MBEa39Xqs8tocGgQ" alt=""></a>
+               <a href="https://www.w3resource.com/sql/creating-index/sql-creating-index.php" target="_blank"><img style="height: 220px; width: 220px" src="https://pbs.twimg.com/profile_images/1008969124200890368/mgzzJR-d.jpg" alt=""></a>
+               <a href="https://fr.wikipedia.org/wiki/Index_(base_de_donn%C3%A9es)" target="_blank"><img style="height: 220px; width: 220px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/2000px-Wikipedia-logo-v2.svg.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+
+    {# ################################################################################################## #}
+
+
+   
+
+{% endblock %}
